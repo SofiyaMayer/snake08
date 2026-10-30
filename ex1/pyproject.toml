@@ -1,0 +1,17 @@
+[project]
+name = "matrix-loading"
+version = "0.1.0"
+description = "Matrix data analysis loaded with pip or with Poetry"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib (>=3.7)",
+    "numpy (>=1.24)",
+    "pandas (>=2.0)",
+]
+
+[tool.poetry]
+package-mode = false
+
+[[tool.mypy.overrides]]
+module = ["matplotlib.*", "numpy.*", "pandas.*"]
+ignore_missing_imports = true
